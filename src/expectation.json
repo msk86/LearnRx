@@ -1,1 +1,6 @@
-null
+[
+  {"name": "Superman", "identity": "Clerk Kent", "avatar": "http://super-heroes.com/superman/medium.jpg"},
+  {"name": "Batman", "identity": "Bruce Wayne", "avatar": "http://super-heroes.com/batman/medium.jpg"},
+  {"name": "Thor", "identity": "Thor", "avatar": "http://super-heroes.com/thor/medium.jpg"},
+  {"name": "Ironman", "identity": "Tony Stark", "avatar": "http://super-heroes.com/ironman/medium.jpg"}
+]
