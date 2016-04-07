@@ -1,1 +1,10 @@
-null
+[{
+  "name": "Superman",
+  "identity": "Clerk Kent"
+}, {
+  "name": "Batman",
+  "identity": "Bruce Wayne"
+}, {
+  "name": "Wonder Woman",
+  "identity": "Diana Prince"
+}]
