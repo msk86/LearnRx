@@ -1,1 +1,11 @@
-null
+[{
+  "id": 10001,
+  "name": "Superman",
+  "identity": "Clerk Kent",
+  "superPower": ["Flight", "Strength", "X-Ray vision"]
+}, {
+  "id": 10003,
+  "name": "Wonder Woman",
+  "identity": "Diana Prince",
+  "superPower": ["Flight", "Martial arts", "God-forged Weapons"]
+}]
