@@ -3,6 +3,7 @@ import 'babel-polyfill'
 import trackableConsole from './trackable-console'
 import exercise from './your-code-here'
 import postCheck from './post-check'
+import './prepare'
 import expectation from './expectation'
 import data from './data'
 
