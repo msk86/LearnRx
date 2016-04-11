@@ -7,3 +7,7 @@ Array.prototype.concatAll = function() {
 Array.prototype.concatMap = function(projectionFunctionReturnsArray) {
     return _.flatMap(this, projectionFunctionReturnsArray);
 };
+
+Array.prototype.reduce = function(...args) {
+    return [_.reduce(this, ...args)];
+};
