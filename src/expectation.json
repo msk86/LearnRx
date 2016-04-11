@@ -1,1 +1,1 @@
-null
+"[1,2].concatMap(x => [x, x]) is [1,1,2,2]"
