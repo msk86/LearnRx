@@ -1,1 +1,1 @@
-null
+"Array.zip([1,2], [3,4], (l, r) => {return l + r;}) is [4,6]"
