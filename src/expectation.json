@@ -1,1 +1,14 @@
-null
+[
+  {
+    "name": "Batman",
+    "assistants": ["Alfred", "Robin"]
+  },
+  {
+    "name": "Thor",
+    "assistants": ["Heimdall"]
+  },
+  {
+    "name": "Ironman",
+    "assistants": ["J.A.R.V.I.S"]
+  }
+]
