@@ -7,9 +7,10 @@ import postCheck from './post-check'
 import './prepare'
 import expectation from './expectation'
 import reactiveData from './reactive-data'
+import rxWrapper from './rx-wrapper'
 
 try {
-    let args = _.concat(reactiveData, trackableConsole);
+    let args = _.concat(rxWrapper(reactiveData), trackableConsole);
 
     let actual = exercise(...args);
     Rx.Observable.merge(...reactiveData).subscribeOnCompleted(() => {
