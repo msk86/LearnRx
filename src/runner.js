@@ -13,7 +13,8 @@ try {
     let args = _.concat(rxWrapper(reactiveData), trackableConsole);
 
     let actual = exercise(...args);
-    Rx.Observable.merge(...reactiveData).subscribeOnCompleted(() => {
+
+    const handler = function () {
         actual = actual
             || trackableConsole.records
             || postCheck()
@@ -27,7 +28,9 @@ try {
             console.log('Actual:');
             console.log('\t', JSON.stringify(actual));
         }
-    });
+    };
+    Rx.Observable.onErrorResumeNext(...reactiveData)
+        .subscribeOnCompleted(handler);
 } catch(e) {
     console.log('ERROR: ', e.message);
 }

@@ -2,17 +2,22 @@ import _ from 'lodash'
 import Rx from 'rx'
 import data from './data'
 
-const dueTime = parseInt(Math.random() * 1000);
-const interval = parseInt(Math.random() * 500);
-const reactiveData = data.map(d => {
-    const timer = Rx.Observable.timer(dueTime, interval);
-    let rData = timer.map(t => d[t]).filter(rd => rd);
-    if(typeof _.last(d) !== 'undefined') {
-        var valueCount = d.filter(v => v).length;
-        rData = rData.take(valueCount);
+const dueTime = 100;
+const interval = 500;
+const reactiveData = data.map((d, i) => {
+    let timer = Rx.Observable.timer(dueTime * i, interval);
+    if(typeof _.last(d) === 'undefined') {
+        timer = timer.take(d.length + 6);
+    } else {
+        timer = timer.take(d.length);
     }
-
-    return rData;
+    return timer.map(t => {
+        const value = d[t];
+        if (value instanceof Error) {
+            throw(value.message);
+        }
+        return value;
+    }).filter(rd => rd);
 });
 
 export default reactiveData;
